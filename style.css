@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url('./assets/Background_Intro.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    color: white;
+    text-align: center;
+    gap: 40px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    justify-content: center; 
+}
+
+#perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    border: 2px solid #E3646E;
+    padding: 5px;
+    transition: all 0.3s ease; 
+}
+
+#perfil:hover{
+    transform: scale(1.05);
+} 
+
+
+h1{
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 900;
+    color: #E2E4E9;
+    font-size: 56px;
+}
+
+header p{
+    font-family: "Asap", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #878EA1;
+    font-size: 20px;
+}
+
+header p span {
+    color: #E3646E;
+    font-weight: 500;
+    position: relative; 
+    transition: color 0.9s ease; 
+}
+
+header p span::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px; 
+    background-color: #E3646E;
+    transition: width 0.9s ease; 
+}
+
+header p span:hover {
+    color: #FF6B7A; 
+}
+
+header p span:hover::after {
+    width: 100%; 
+}
+
+.skill {
+    font-family: "Asap", sans-serif;
+    font-weight: 100;
+    background-color: #292C34;
+    padding: 8px 15px;
+    border-radius: 35px;
+    display: flex;
+    gap: 10px;
+    flex: 1 1 calc(33.333% - 20px); 
+    justify-content: center;
+    min-width: 150px; 
+    max-width: 200px; 
+    text-align: center;
+}
+
+.pirula {
+    transition: all 0.3s ease; 
+}
+
+.pirula:hover {
+    transform: translateY(-5px);
+}
+
+.pirula:hover img {
+    transform: none; 
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .skill {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .skill {
+        flex: 1 1 100%; 
+    }
+}
+
+/* Estilos para a seção de projetos */
+
+#projetos{
+    min-height: 100vh;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: #16181D;
+}
+
+h4{
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 600;
+    color: #E2E4E9;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p{
+    font-family: "Asap", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+#subtext {
+    font-family: "Asap", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #E3646E;
+    margin-top: 25px;
+}
+
+h3{
+    font-family: "Asap", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#blocosprojetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    box-sizing: border-box; 
+    margin: auto 5%;
+}
+
+#blocosprojetos .projeto {
+    max-width: calc(27% - 30px); 
+    min-width: 250px; 
+    background-color: #292C34;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    text-align: left;
+    color: #E2E4E9;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    flex: 1 1 calc(33.333% - 20px); 
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; 
+}
+
+#blocosprojetos .projeto:hover {
+    transform: scale(1.05); 
+}
+
+
+.projeto img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 5px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    #blocosprojetos .projeto {
+        max-width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 768px) {
+    #blocosprojetos .projeto {
+        max-width: 100%; 
+    }
+
+    header {
+        padding: 20px; 
+        text-align: center; 
+    }
+
+    h1 {
+        font-size: 36px; 
+    }
+
+    header p {
+        font-size: 16px; 
+    }
+
+    ul {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    #perfil {
+        width: 80px; 
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 28px; 
+    }
+
+    header p {
+        font-size: 14px; 
+    }
+
+    #blocosprojetos {
+        gap: 10px; 
+    }
+}
+
+/* Estilos para seção Serviços */
+
+#servicos {
+    min-height: 480px;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: #0D0E11;
+    padding: 88px 120px 120px 120px;
+}
+
+#blocoservicos{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    max-width: 100%; 
+    box-sizing: border-box; 
+    margin: auto 5%;
+    margin-top: 56px;
+}
+
+.servico{
+    border: 3px solid #16181D;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.servico:hover{
+   transform: scale(1.05);
+}
+
+/*Estilos para seção Contato*/
+
+#contato{
+    background-image: url('./assets/Background_Intro.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: #16181D;
+    padding: 128px 120px 200px 120px;
+    text-align: center;
+}
+
+#blocoredesocial{
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%; 
+    box-sizing: border-box; 
+    margin: auto 5%;
+    margin-top: 56px;
+}
+
+.redesocial{
+    border: 3px solid #292C34;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 350px;
+    text-decoration: none;
+    color: #E2E4E9;
+    font-family: "Asap", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    color: #ffffff;
+    justify-content: center;
+}
+
+.redesocial:hover{
+    background-color: #292C34;
+}
+
+@media (max-width: 585px) {
+    .redesocial {
+        min-width: 100px;
+    }
+}
